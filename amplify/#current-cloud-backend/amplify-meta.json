@@ -1,0 +1,52 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-tadapp-dev-55802-authRole",
+      "UnauthRoleArn": "arn:aws:iam::648766712947:role/amplify-tadapp-dev-55802-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::648766712947:role/amplify-tadapp-dev-55802-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-tadapp-dev-55802-deployment",
+      "UnauthRoleName": "amplify-tadapp-dev-55802-unauthRole",
+      "StackName": "amplify-tadapp-dev-55802",
+      "StackId": "arn:aws:cloudformation:us-east-2:648766712947:stack/amplify-tadapp-dev-55802/e9d83160-3f52-11eb-8cb7-02ee530ea0b0",
+      "AmplifyAppId": "d239go9j90pbae"
+    }
+  },
+  "auth": {
+    "tadappe7ef84ac": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-tadapp-dev-55802-deployment/amplify-cfn-templates/auth/tadappe7ef84ac-cloudformation-template.yml",
+        "logicalId": "authtadappe7ef84ac"
+      },
+      "lastPushTimeStamp": "2020-12-16T04:16:28.354Z",
+      "output": {
+        "AppClientSecret": "u3fjujo4a1bjutpt96r82suo8ir50tl5sdascc303jolcc58vl1",
+        "UserPoolId": "us-east-2_Hx6qidued",
+        "AppClientIDWeb": "10vbsr3i5145vf3hle4rs7f3d0",
+        "AppClientID": "5a3s5fchqsg5oscrbaj2fq3lem",
+        "IdentityPoolId": "us-east-2:5b40e016-404b-4542-83f3-7991e8246226",
+        "IdentityPoolName": "tadappe7ef84ac_identitypool_e7ef84ac__dev",
+        "UserPoolName": "tadappe7ef84ac_userpool_e7ef84ac"
+      },
+      "lastPushDirHash": "tXssKXtu9qP2eaAiPePpzvogJG8="
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "providerPlugin": "awscloudformation",
+      "type": "manual",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-tadapp-dev-55802-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
+        "logicalId": "hostingamplifyhosting"
+      },
+      "lastPushTimeStamp": "2020-12-16T04:16:28.360Z",
+      "output": {},
+      "lastPushDirHash": "/+VZ33seFFqAr6wbtptwbINUfSA="
+    }
+  }
+}

@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[43],{py9D:function(n,e,t){"use strict";t.r(e),t.d(e,"amplify_container",(function(){return c}));var i=t("Cx7U"),c=function(){function n(n){Object(i.k)(this,n)}return n.prototype.render=function(){return Object(i.i)(i.b,null,Object(i.i)("slot",null))},n}();c.style=":host{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;height:100vh}"}}]);
+//# sourceMappingURL=43-58de80035833cc66dbb2.js.map

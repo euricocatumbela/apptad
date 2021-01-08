@@ -1,0 +1,26 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-tadapp-dev-55802-authRole",
+            "UnauthRoleArn": "arn:aws:iam::648766712947:role/amplify-tadapp-dev-55802-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::648766712947:role/amplify-tadapp-dev-55802-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-tadapp-dev-55802-deployment",
+            "UnauthRoleName": "amplify-tadapp-dev-55802-unauthRole",
+            "StackName": "amplify-tadapp-dev-55802",
+            "StackId": "arn:aws:cloudformation:us-east-2:648766712947:stack/amplify-tadapp-dev-55802/e9d83160-3f52-11eb-8cb7-02ee530ea0b0",
+            "AmplifyAppId": "d239go9j90pbae"
+        },
+        "categories": {
+            "auth": {
+                "tadappe7ef84ac": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d239go9j90pbae",
+                    "type": "manual"
+                }
+            }
+        }
+    }
+}
