@@ -1,50 +1,50 @@
-import { Link } from "gatsby"
-import React, { useState, useEffect, useRef } from "react"
-import styled from "styled-components"
-import { headerLinks } from "../../data/MenuData"
-import Menu from "../tooltip/Menu"
+import { Link } from "gatsby";
+import React, { useState, useEffect, useRef } from "react";
+import styled from "styled-components";
+import { headerLinks } from "../../data/MenuData";
+import Menu from "../tooltip/Menu";
 
 export default function Header() {
-  const [active, setActive] = useState(false)
-  const ref = useRef()
-  const toolRef = useRef()
+  const [active, setActive] = useState(false);
+  const ref = useRef();
+  const toolRef = useRef();
 
   function handleClick(event) {
-    setActive(!active)
-    event.preventDefault()
+    setActive(!active);
+    event.preventDefault();
   }
   function handleClickOutside(event) {
     if (ref.current && !ref.current.contains(event.target)) {
-      console.log("Document is clicked")
-      setActive(false)
+      console.log("Document is clicked");
+      setActive(false);
     } else if (toolRef.current && !toolRef.current.contains(event.target)) {
-      console.log("Document is clicked")
-      setActive(false)
+      console.log("Document is clicked");
+      setActive(false);
     }
   }
   useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside)
+    document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [])
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <Wrapper ref={ref}>
-      <Link to="https://www.takeanydoubt.com/">
-        <Title>TakeAnyDoubt</Title>
+      <Link to="/admin/home">
+        <Title>Dashboard</Title>
       </Link>
       <ItemGroup>
-        {headerLinks.map(items => (
+        {headerLinks.map((items) => (
           <Items key={items.title} onClick={handleClick}>
             {active ? <Menu ref={toolRef} /> : ""}
-            <img src={items.icon} />
+            <img alt={items.title} src={items.icon} />
             {items.title}
           </Items>
         ))}
       </ItemGroup>
     </Wrapper>
-  )
+  );
 }
 
 const Wrapper = styled.div`
@@ -60,7 +60,8 @@ const Wrapper = styled.div`
   }
   background: #ffff;
   box-shadow: 0px 1px 1px #c4c4c4;
-`
+  z-index: 1;
+`;
 const ItemGroup = styled.div`
   display: grid;
   justify-content: center;
@@ -74,7 +75,7 @@ const ItemGroup = styled.div`
     background: lightgrey;
     width: 144px;
   }
-`
+`;
 
 const Items = styled.div`
   display: grid;
@@ -86,7 +87,7 @@ const Items = styled.div`
     width: 30px;
     height: 30px;
   }
-`
+`;
 const Title = styled.h1`
   text-align: center;
   padding: 10px;
@@ -98,7 +99,7 @@ const Title = styled.h1`
     inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   color: white;
-`
+`;
 
 // const Icon = styled.img`
 //   width: 100px;

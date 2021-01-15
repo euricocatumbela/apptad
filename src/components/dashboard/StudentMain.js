@@ -1,7 +1,7 @@
-import { Link } from "gatsby"
-import React from "react"
-import styled from "styled-components"
-import { MediumText } from "../styles/TextStyles"
+import { Link } from "gatsby";
+import React from "react";
+import styled from "styled-components";
+import { MediumText } from "../styles/TextStyles";
 
 export default function StudentMain() {
   return (
@@ -9,7 +9,7 @@ export default function StudentMain() {
       <Title>Students</Title>
       <WrapperContent>
         <TextContent>
-          <Icon src="images/galery/students.svg" />
+          <Icon src="/images/galery/students.svg" />
           <Heading>Manage student details</Heading>
           <Subtitle>
             This is where you’ll add students and manage your students. You can
@@ -26,7 +26,7 @@ export default function StudentMain() {
         </GroupButton>
       </WrapperContent>
     </Wrapper>
-  )
+  );
 }
 
 export const FileMain = () => {
@@ -46,12 +46,14 @@ export const FileMain = () => {
           <Link to="/dash/file-content">
             <AddButton>Content</AddButton>
           </Link>
-          <ManageButton>Manage contents</ManageButton>
+          <Link to="/dash/file-content">
+            <ManageButton>Memo</ManageButton>
+          </Link>
         </GroupButton>
       </WrapperContent>
     </Wrapper>
-  )
-}
+  );
+};
 export const TutorMain = () => {
   return (
     <Wrapper>
@@ -75,8 +77,8 @@ export const TutorMain = () => {
         </GroupButton>
       </WrapperContent>
     </Wrapper>
-  )
-}
+  );
+};
 export const SubjectMain = () => {
   return (
     <Wrapper>
@@ -100,49 +102,49 @@ export const SubjectMain = () => {
         </GroupButton>
       </WrapperContent>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.div`
   position: absolute;
   top: 80px;
   left: 280px;
-`
+`;
 const Title = styled.h1`
   padding: 0 0 30px 0;
   font-size: 28px;
   font-weight: bold;
-`
+`;
 const TextContent = styled.div`
   margin: 0 auto;
-`
+`;
 const WrapperContent = styled.div`
   width: 98%;
   height: 500px;
   background: #ffffff;
   box-shadow: 0px 10px 20px #c4c4c4;
   border-radius: 20px;
-`
+`;
 const Icon = styled.img`
   margin: 0 300px 0 430px;
-`
+`;
 const Heading = styled.h2`
   font-size: 24px;
   font-weight: bold;
   text-align: center;
   padding: 0 0 20px 0;
-`
+`;
 const Subtitle = styled(MediumText)`
   text-align: center;
   color: rgb(1, 1, 1, 0.7);
   margin: 0 160px 0 160px;
-`
+`;
 const GroupButton = styled.div`
   display: grid;
   grid-template-columns: 160px auto;
   justify-content: center;
   padding: 20px 20px;
-`
+`;
 const AddButton = styled.button`
   width: 150px;
   height: 44px;
@@ -152,7 +154,7 @@ const AddButton = styled.button`
   border: none;
   font-size: 15px;
   cursor: pointer;
-`
+`;
 const ManageButton = styled.button`
   width: 180px;
   height: 44px;
@@ -162,4 +164,4 @@ const ManageButton = styled.button`
   font-weight: 500px;
   cursor: pointer;
   background-color: white;
-`
+`;

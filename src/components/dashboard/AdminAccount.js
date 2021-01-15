@@ -1,14 +1,14 @@
-import React, { useState } from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
-import AvatarTool from "../../components/toolkit/AvatarTool"
-import { TabScrollButton } from "@material-ui/core"
+import React, { useState } from "react";
+import { Link } from "gatsby";
+import styled from "styled-components";
+import AvatarTool from "../../components/toolkit/AvatarTool";
+import { TabScrollButton } from "@material-ui/core";
 const AdminAccount = () => {
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState(false);
   return (
     <WrapperHero>
       <WrapperContent>
-        <Link to="/admin">
+        <Link to="/admin/home">
           <BackButton>
             <TabScrollButton />
           </BackButton>
@@ -23,7 +23,7 @@ const AdminAccount = () => {
         </TextWrapper>
         <ContentWrapper>
           <AvatarIcon>
-            <img alt="" src="/images/icons/user.svg" />
+            <img alt="" src="/images/icons/image.svg" />
           </AvatarIcon>
           <ChangeAvatar onClick={() => setActive(!active)}>
             {active ? <AvatarTool /> : null}
@@ -36,7 +36,7 @@ const AdminAccount = () => {
           <InputDiv1>
             <Input placeholder="Your name"></Input>
             <Icon>
-              <img alt="" src="/images/icons/user.svg" />
+              <img alt="" src="/images/icons/image.svg" />
             </Icon>
           </InputDiv1>
           <InputDiv2>
@@ -62,16 +62,16 @@ const AdminAccount = () => {
         </ContentWrapper2>
       </Wrapper>
     </WrapperHero>
-  )
-}
+  );
+};
 
-export default AdminAccount
+export default AdminAccount;
 
 const WrapperHero = styled.div`
   position: absolute;
   top: 80px;
   left: 380px;
-`
+`;
 
 const Wrapper = styled.div`
   width: 100%;
@@ -84,17 +84,17 @@ const Wrapper = styled.div`
   backdrop-filter: blur(40px);
   border-radius: 20px;
   margin-right: 200px;
-`
+`;
 const Heading1 = styled.h1`
   font-size: 22px;
   font-weight: bold;
   color: black;
-`
+`;
 const TextWrapper = styled.div`
   margin: 20px 0 0 20px;
   display: grid;
   gap: 10px;
-`
+`;
 const Title = styled.h3`
   font-style: normal;
   font-weight: 600;
@@ -104,7 +104,7 @@ const Title = styled.h3`
   color: black;
 
   text-transform: uppercase;
-`
+`;
 const Subtitle = styled.p`
   font-style: normal;
   font-weight: normal;
@@ -113,26 +113,26 @@ const Subtitle = styled.p`
   /* color: rgba(255, 255, 255, 0.7); */
   color: black;
   mix-blend-mode: normal;
-`
+`;
 const ContentWrapper = styled.div`
   margin-top: 80px;
   display: grid;
   grid-template-columns: 154px 524px;
   align-items: center;
-`
+`;
 const Text = styled.p`
   margin: 3px;
   color: black;
   /* color: rgb(255, 255, 255, 07); */
   text-align: center;
-`
+`;
 const ContentWrapper2 = styled.div`
   margin-top: 20px;
   display: grid;
   grid-template-columns: 340px 184px;
   gap: 20px;
   margin-left: 30px;
-`
+`;
 const ProfileSetting = styled.p`
   font-style: normal;
   font-weight: 600;
@@ -142,7 +142,7 @@ const ProfileSetting = styled.p`
   /* color: #ffffff; */
   color: black;
   mix-blend-mode: normal;
-`
+`;
 const AccountSetting = styled.p`
   font-style: normal;
   font-weight: 600;
@@ -152,7 +152,7 @@ const AccountSetting = styled.p`
   /* color: #ffffff; */
   color: black;
   mix-blend-mode: normal;
-`
+`;
 const AvatarIcon = styled.div`
   position: relative;
   top: -10px;
@@ -168,7 +168,7 @@ const AvatarIcon = styled.div`
     height: 80px;
     border-radius: 50%;
   }
-`
+`;
 const ChangeAvatar = styled.div`
   width: 141px;
   height: 33px;
@@ -183,7 +183,7 @@ const ChangeAvatar = styled.div`
   backdrop-filter: blur(40px);
   border-radius: 30px;
   cursor: pointer;
-`
+`;
 
 const InputDiv1 = styled.div`
   font-size: 15px;
@@ -205,7 +205,7 @@ const InputDiv1 = styled.div`
     width: 30px;
     border-radius: 100px;
   }
-`
+`;
 
 const InputDiv2 = styled.div`
   font-size: 15px;
@@ -227,7 +227,7 @@ const InputDiv2 = styled.div`
     width: 30px;
     border-radius: 50%;
   }
-`
+`;
 
 const InputDiv3 = styled.div`
   font-size: 15px;
@@ -249,7 +249,7 @@ const InputDiv3 = styled.div`
     width: 30px;
     border-radius: 100px;
   }
-`
+`;
 
 const InputDiv4 = styled.div`
   font-size: 15px;
@@ -271,7 +271,7 @@ const InputDiv4 = styled.div`
     width: 30px;
     border-radius: 100px;
   }
-`
+`;
 
 const Input = styled.input`
   margin-left: 60px;
@@ -284,7 +284,7 @@ const Input = styled.input`
   border: none;
   border-radius: 30px;
   outline: none;
-`
+`;
 const InputDescription = styled.input`
   margin-left: 60px;
   width: 300px;
@@ -296,7 +296,7 @@ const InputDescription = styled.input`
   color: black;
   font-weight: normal;
   font-size: 15px;
-`
+`;
 
 const SaveButton = styled.button`
   width: 180px;
@@ -311,7 +311,7 @@ const SaveButton = styled.button`
   /* background: linear-gradient(91.4deg, #2fb8ff 0%, #9eecd9 100%); */
   box-shadow: 0px 20px 40px rgba(147, 231, 221, 0.3);
   border-radius: 30px;
-`
+`;
 const ResetButton = styled.button`
   width: 180px;
   height: 44px;
@@ -323,7 +323,7 @@ const ResetButton = styled.button`
   cursor: pointer;
   outline: none;
   color: white;
-`
+`;
 
 const WrapperContent = styled.div`
   display: grid;
@@ -331,7 +331,7 @@ const WrapperContent = styled.div`
   align-items: center;
   gap: 20px;
   padding: 0 0 40px 0;
-`
+`;
 
 const BackButton = styled.button`
   width: 60px;
@@ -343,7 +343,7 @@ const BackButton = styled.button`
   border-radius: 5px;
   font-weight: bold;
   transform: rotateY(90deg) rotateY(90deg);
-`
+`;
 const Icon = styled.div`
   position: relative;
   bottom: 42px;
@@ -352,4 +352,4 @@ const Icon = styled.div`
   border-radius: 50%;
   height: 40px;
   width: 40px;
-`
+`;

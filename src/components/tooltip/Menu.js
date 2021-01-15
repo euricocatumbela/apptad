@@ -1,29 +1,30 @@
-import { Link } from "gatsby"
-import React from "react"
-import styled from "styled-components"
-import { MenuItem } from "../../data/MenuData"
+import { Link } from "gatsby";
+import React from "react";
+import styled from "styled-components";
+import { MenuItem } from "../../data/MenuData";
 
 export default function Menu(props) {
-  const { toolRef, ref } = props
+  const { toolRef, ref } = props;
+
   return (
     <Wrapper ref={ref}>
       {MenuItem.map((item, index) => (
         <Link ref={toolRef} key={item.title} to={item.link}>
           <MenuItems ref={toolRef}>
-            <img src={item.icon} />
+            <img alt={item.title} src={item.icon} />
             {item.title}
           </MenuItems>
         </Link>
       ))}
     </Wrapper>
-  )
+  );
 }
 
 const Wrapper = styled.div`
   position: absolute;
   right: 5px;
   top: 60px;
-  /* width: 220px; */
+
   height: 200px;
   background: #16145a;
   box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.25),
@@ -35,7 +36,7 @@ const Wrapper = styled.div`
   gap: 10px;
   grid-template-columns: 150px;
   z-index: 1;
-`
+`;
 const MenuItems = styled.div`
   display: grid;
   grid-template-columns: 24px auto;
@@ -51,15 +52,4 @@ const MenuItems = styled.div`
       inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.2);
     border-radius: 10px;
   }
-`
-/* display: grid;
-  grid-template-columns: 34px auto;
-  align-items: center;
-  color: rgb(255, 255, 255);
-  font-size: 15px;
-  font-weight: normal;
-  font-style: normal;
-  margin: 20px 0 0 0;
-  padding: 10px 20px 10px 20px;
-  gap: 1px;
-  */
+`;

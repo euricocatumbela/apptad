@@ -1,17 +1,27 @@
 {
   "auth": {
-    "tadappe7ef84ac": {
+    "tad360e5914": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "customAuth": false
     }
   },
-  "hosting": {
-    "amplifyhosting": {
-      "service": "amplifyhosting",
+  "api": {
+    "tad": {
+      "service": "AppSync",
       "providerPlugin": "awscloudformation",
-      "type": "manual"
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authtad360e5914"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        }
+      }
     }
   }
 }

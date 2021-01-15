@@ -1,23 +1,23 @@
-import React, { forwardRef } from "react"
-import MaterialTable from "material-table"
-import { TabScrollButton } from "@material-ui/core"
-import styled from "styled-components"
-import AddBox from "@material-ui/icons/AddBox"
-import ArrowDownward from "@material-ui/icons/ArrowDownward"
-import Check from "@material-ui/icons/Check"
-import ChevronLeft from "@material-ui/icons/ChevronLeft"
-import ChevronRight from "@material-ui/icons/ChevronRight"
-import Clear from "@material-ui/icons/Clear"
-import DeleteOutline from "@material-ui/icons/DeleteOutline"
-import Edit from "@material-ui/icons/Edit"
-import FilterList from "@material-ui/icons/FilterList"
-import FirstPage from "@material-ui/icons/FirstPage"
-import LastPage from "@material-ui/icons/LastPage"
-import Remove from "@material-ui/icons/Remove"
-import SaveAlt from "@material-ui/icons/SaveAlt"
-import Search from "@material-ui/icons/Search"
-import ViewColumn from "@material-ui/icons/ViewColumn"
-import { Link } from "gatsby"
+import React, { forwardRef } from "react";
+import MaterialTable from "material-table";
+import { TabScrollButton } from "@material-ui/core";
+import styled from "styled-components";
+import AddBox from "@material-ui/icons/AddBox";
+import ArrowDownward from "@material-ui/icons/ArrowDownward";
+import Check from "@material-ui/icons/Check";
+import ChevronLeft from "@material-ui/icons/ChevronLeft";
+import ChevronRight from "@material-ui/icons/ChevronRight";
+import Clear from "@material-ui/icons/Clear";
+import DeleteOutline from "@material-ui/icons/DeleteOutline";
+import Edit from "@material-ui/icons/Edit";
+import FilterList from "@material-ui/icons/FilterList";
+import FirstPage from "@material-ui/icons/FirstPage";
+import LastPage from "@material-ui/icons/LastPage";
+import Remove from "@material-ui/icons/Remove";
+import SaveAlt from "@material-ui/icons/SaveAlt";
+import Search from "@material-ui/icons/Search";
+import ViewColumn from "@material-ui/icons/ViewColumn";
+import { Link } from "gatsby";
 
 export default function TutorList() {
   const [state, setState] = React.useState({
@@ -158,7 +158,7 @@ export default function TutorList() {
         postCode: "111",
       },
     ],
-  })
+  });
 
   const tableIcons = {
     Add: forwardRef((props, ref) => <AddBox {...props} ref={ref} />),
@@ -186,12 +186,12 @@ export default function TutorList() {
       <Remove {...props} ref={ref} />
     )),
     ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />),
-  }
+  };
 
   return (
     <Wrapper>
       <WrapperContent>
-        <Link to="/manage-tutor">
+        <Link to="/admin/manage-tutor">
           <BackButton>
             <TabScrollButton />
           </BackButton>
@@ -203,46 +203,46 @@ export default function TutorList() {
         columns={state.columns}
         data={state.data}
         editable={{
-          onRowAdd: newData =>
-            new Promise(resolve => {
+          onRowAdd: (newData) =>
+            new Promise((resolve) => {
               setTimeout(() => {
-                resolve()
-                setState(prevState => {
-                  const data = [...prevState.data]
-                  data.push(newData)
-                  return { ...prevState, data }
-                })
-              }, 600)
+                resolve();
+                setState((prevState) => {
+                  const data = [...prevState.data];
+                  data.push(newData);
+                  return { ...prevState, data };
+                });
+              }, 600);
             }),
           onRowUpdate: (newData, oldData) =>
-            new Promise(resolve => {
+            new Promise((resolve) => {
               setTimeout(() => {
-                resolve()
+                resolve();
                 if (oldData) {
-                  setState(prevState => {
-                    const data = [...prevState.data]
-                    data[data.indexOf(oldData)] = newData
-                    return { ...prevState, data }
-                  })
+                  setState((prevState) => {
+                    const data = [...prevState.data];
+                    data[data.indexOf(oldData)] = newData;
+                    return { ...prevState, data };
+                  });
                 }
-              }, 600)
+              }, 600);
             }),
-          onRowDelete: oldData =>
-            new Promise(resolve => {
+          onRowDelete: (oldData) =>
+            new Promise((resolve) => {
               setTimeout(() => {
-                resolve()
-                setState(prevState => {
-                  const data = [...prevState.data]
-                  data.splice(data.indexOf(oldData), 1)
-                  return { ...prevState, data }
-                })
-              }, 600)
+                resolve();
+                setState((prevState) => {
+                  const data = [...prevState.data];
+                  data.splice(data.indexOf(oldData), 1);
+                  return { ...prevState, data };
+                });
+              }, 600);
             }),
         }}
         icons={tableIcons}
       ></MaterialTable>
     </Wrapper>
-  )
+  );
 }
 
 const Wrapper = styled.div`
@@ -250,18 +250,18 @@ const Wrapper = styled.div`
   width: 78%;
   top: 88px;
   left: 280px;
-`
+`;
 const WrapperContent = styled.div`
   display: grid;
   grid-template-columns: 50px auto;
   align-items: center;
   gap: 20px;
   padding: 0 0 40px 0;
-`
+`;
 const Title = styled.h1`
   font-size: 22px;
   font-weight: bold;
-`
+`;
 const BackButton = styled.button`
   width: 60px;
   height: 40px;
@@ -272,4 +272,4 @@ const BackButton = styled.button`
   border-radius: 5px;
   font-weight: bold;
   transform: rotateY(90deg) rotateY(90deg);
-`
+`;

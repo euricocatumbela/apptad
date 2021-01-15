@@ -213,7 +213,7 @@ export default function StudentList() {
   return (
     <Wrapper>
       <WrapperContent>
-        <Link to="/manage-student">
+        <Link to="/admin/manage-student">
           <BackButton>
             <TabScrollButton />
           </BackButton>
