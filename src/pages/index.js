@@ -19,6 +19,6 @@ function IndexPage() {
 export default IndexPage;
 
 const Wrapper = styled.div`
-  padding: 320px 0 600px 0;
-  background: linear-gradient(180deg, #491eb8 0%, #dc6969 97.82%);
+  padding: 120px 0 600px 0;
+  /* background: linear-gradient(180deg, #491eb8 0%, #dc6969 97.82%); */
 `;

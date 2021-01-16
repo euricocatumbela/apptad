@@ -26,10 +26,10 @@ const Wrapper = styled.div`
   top: 60px;
 
   height: 200px;
-  background: #16145a;
-  box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.25),
+  background: green;
+  /* box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.25),
     inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px); */
   border-radius: 20px;
   padding: 20px;
   display: grid;

@@ -9,9 +9,9 @@ const Profile = () => {
     <Wrapper>
       <SEO title="tutor-Profile" />
       <Global />
-      <Icon src="/images/icons/user.svg" />
-      <Title>Eurico Catumbela</Title>
-      <Description>Software Engineer</Description>
+      <Icon src="/images/avatars/chris.png" />
+      <Title>Chris Jr</Title>
+      <Description>Admin</Description>
     </Wrapper>
   );
 };

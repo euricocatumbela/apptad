@@ -22,7 +22,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-tad-dev-224415-deployment/amplify-cfn-templates/auth/tad360e5914-cloudformation-template.yml",
         "logicalId": "authtad360e5914"
       },
-      "lastPushTimeStamp": "2021-01-14T09:20:28.811Z",
+      "lastPushTimeStamp": "2021-01-16T13:59:28.782Z",
       "output": {
         "AppClientSecret": "866qtir6covn5rtrtnl7tf31rpdcura5mcjeqa0t7c91lp3p5af",
         "UserPoolId": "us-east-1_2g8Yqcow4",
@@ -56,8 +56,8 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-tad-dev-224415-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apitad"
       },
-      "lastPushTimeStamp": "2021-01-14T09:20:29.166Z",
-      "lastPushDirHash": "ZKuPh5nuyyCHnxnLhy7qRRw8nSU="
+      "lastPushTimeStamp": "2021-01-16T13:59:29.221Z",
+      "lastPushDirHash": "BByi0m1koimi4/7cCe4FwlBqRt0="
     }
   }
 }

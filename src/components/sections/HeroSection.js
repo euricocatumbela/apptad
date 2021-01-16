@@ -42,7 +42,7 @@ const WrapperContent = styled.div`
 const Option = styled.button`
   width: 550px;
   height: 80px;
-  background: blue;
+  background: green;
   border-radius: 20px;
   border: none;
   outline: none;
