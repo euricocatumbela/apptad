@@ -37,6 +37,7 @@ import { AmplifyAuthenticator } from "@aws-amplify/ui-react";
 //     },
 //   },
 //   series: [
+
 //     {
 //       name: "Active users",
 //       data: [
