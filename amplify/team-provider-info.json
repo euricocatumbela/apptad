@@ -1,19 +1,19 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-tad-dev-224415-authRole",
-      "UnauthRoleArn": "arn:aws:iam::648766712947:role/amplify-tad-dev-224415-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::648766712947:role/amplify-tad-dev-224415-authRole",
-      "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-tad-dev-224415-deployment",
-      "UnauthRoleName": "amplify-tad-dev-224415-unauthRole",
-      "StackName": "amplify-tad-dev-224415",
-      "StackId": "arn:aws:cloudformation:us-east-1:648766712947:stack/amplify-tad-dev-224415/1fe24590-55e0-11eb-95e9-0a3fc8cbcb75",
-      "AmplifyAppId": "d12mhtn34xd5jn"
+      "AuthRoleName": "amplify-myadmin-dev-14223-authRole",
+      "UnauthRoleArn": "arn:aws:iam::648766712947:role/amplify-myadmin-dev-14223-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::648766712947:role/amplify-myadmin-dev-14223-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-myadmin-dev-14223-deployment",
+      "UnauthRoleName": "amplify-myadmin-dev-14223-unauthRole",
+      "StackName": "amplify-myadmin-dev-14223",
+      "StackId": "arn:aws:cloudformation:us-east-2:648766712947:stack/amplify-myadmin-dev-14223/fff64b80-5aaf-11eb-a425-0a215cc04b52",
+      "AmplifyAppId": "d14o0nq3s5pfan"
     },
     "categories": {
       "auth": {
-        "tad360e5914": {}
+        "myadmin267be453": {}
       }
     }
   }

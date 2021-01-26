@@ -1,65 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Layout from "../../components/layout/layout";
-// import Chart from "react-apexcharts"
 import SEO from "../../components/layout/seo";
 import AdminTool from "../../components/toolkit/AdminTool";
+//API Gateaway
+import { API, graphqlOperation } from "aws-amplify";
 import { AmplifyAuthenticator } from "@aws-amplify/ui-react";
-// const state = {
-//   options: {
-//     colors: ["#14f1d9", "#7b42f6"],
-//     legend: {
-//       labels: {
-//         colors: ["black"],
-//       },
-//       position: "top",
-//     },
-//     tooltip: {
-//       theme: "dark",
-//     },
-//     grid: {
-//       xaxis: {
-//         lines: {
-//           show: true,
-//         },
-//       },
-//       yaxis: {
-//         lines: {
-//           show: false,
-//         },
-//       },
-//     },
-//     chart: {
-//       id: "takeanydoubt",
-//     },
-//     xaxis: {
-//       type: "datetime",
-//     },
-//   },
-//   series: [
-
-//     {
-//       name: "Active users",
-//       data: [
-//         [new Date("January 1, 2020"), 30],
-//         [new Date("April 14, 2020"), 40],
-//       ],
-//     },
-//     {
-//       name: "New Users",
-//       data: [
-//         [new Date("April 15, 2020"), 80],
-//         [new Date("August 14, 2020"), 40],
-//       ],
-//     },
-//   ],
-// }
+import { listSubjects } from "../../graphql/queries";
 
 var date = new Date();
 var currentDate = date.getFullYear();
 var currentDay = date.getDate();
 
 const CountDash = () => {
+  const [subjects, setSubjects] = useState([listSubjects]);
+
+  useEffect(() => {
+    //fetch notes
+    fetchSubjects();
+  }, []);
+
+  async function fetchSubjects() {
+    try {
+      const subjectData = await API.graphql(graphqlOperation(listSubjects));
+      const subjects = subjectData.data.listSubjects.items;
+      setSubjects(subjects);
+    } catch (err) {
+      console.log("error fetching subjects");
+    }
+  }
+  const length = subjects.length;
+  var percentage = 100;
+  let total = length / percentage;
+  console.log(total);
+
+  console.log(length);
   return (
     <WrapperTitle>
       <h1>Overview dashboard</h1>
@@ -95,27 +70,13 @@ const CountDash = () => {
         </VerticalLine5>
         <VerticalLine6>
           <h3>Subjects</h3>
-          <h2>0</h2>
-          <p>0%</p>
+          <h2>{length}</h2>
+          <p>{total}</p>
         </VerticalLine6>
       </HomeMain>
     </WrapperTitle>
   );
 };
-
-// const Graph = () => {
-//   return (
-//     <NewGraph>
-//       {/* <Chart
-//   options={state.options}
-//   series={state.series}
-//   type="area"
-//   width={500}
-//   height={320}
-// /> */}
-//     </NewGraph>
-//   )
-// }
 
 const Home = () => {
   return (

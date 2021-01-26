@@ -1,6 +1,6 @@
 projects:
-  tad:
-    schemaPath: amplify/backend/api/tad/build/schema.graphql
+  myadmin:
+    schemaPath: src/graphql/schema.json
     includes:
       - src/graphql/**/*.js
     excludes:

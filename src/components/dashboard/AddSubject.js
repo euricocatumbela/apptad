@@ -10,20 +10,20 @@ import { createSubject } from "../../graphql/mutations";
 import { listSubjects } from "../../graphql/queries";
 import Amplify from "aws-amplify";
 import awsConfig from "../../aws-exports";
+Amplify.configure(awsConfig);
 
 const initialState = {
-  s_name: "",
+  name: "",
   course: "",
   academic_level: "",
 };
 
-Amplify.configure(awsConfig);
-
 const AddSubject = () => {
   const [formState, setFormState] = useState(initialState);
-
   const [subjects, setSubjects] = useState([]);
 
+  const length = subjects.length;
+  console.log(length);
   useEffect(() => {
     //fetch notes
     fetchSubjects();
@@ -39,20 +39,20 @@ const AddSubject = () => {
       const subjects = subjectData.data.listSubjects.items;
       setSubjects(subjects);
     } catch (err) {
-      console.log("Error fetching data");
+      console.log("error fetching subjects");
     }
   }
 
   async function addSubejct() {
     try {
-      if (!formState.s_name || !formState.course || !formState.academic_level)
+      if (!formState.name || !formState.course || !formState.academic_level)
         return;
       const subject = { ...formState };
       setSubjects([...subjects, subject]);
       setFormState(initialState);
       await API.graphql(graphqlOperation(createSubject, { input: subject }));
     } catch (err) {
-      console.log("Error in creating subjects");
+      console.log("error creating subject", err);
     }
   }
 
@@ -73,8 +73,8 @@ const AddSubject = () => {
           providing all the necessary informations.
         </Subtitle>
         <Input
-          onChange={(event) => setInput("s_name", event.target.value)}
-          value={formState.s_name}
+          onChange={(event) => setInput("name", event.target.value)}
+          value={formState.name}
           placeholder="Subject name"
         />
         <Input
@@ -88,12 +88,12 @@ const AddSubject = () => {
           placeholder="Subject level"
         />
 
-        <SaveButton onSubmit={addSubejct}>Add</SaveButton>
+        <SaveButton onClick={addSubejct}>Add</SaveButton>
       </WrapperForm>
 
       {subjects.map((subject, index) => (
         <div key={subject.id ? subject.id : index}>
-          {subject.s_name}
+          {subject.name}
           <p>{subject.course}</p>
           <p>{subject.academic_level}</p>
         </div>

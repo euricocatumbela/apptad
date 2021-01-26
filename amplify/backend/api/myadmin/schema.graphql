@@ -1,0 +1,6 @@
+type Subject @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  name: String!
+  course: String
+  academic_level: String
+}

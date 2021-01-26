@@ -16,7 +16,9 @@ exports.components = {
   "component---src-pages-admin-manage-student-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/admin/manage-student.js"))),
   "component---src-pages-admin-manage-subject-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/admin/manage-subject.js"))),
   "component---src-pages-admin-manage-tutor-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/admin/manage-tutor.js"))),
+  "component---src-pages-admin-profile-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/admin/profile.js"))),
   "component---src-pages-admin-settings-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/admin/settings.js"))),
+  "component---src-pages-app-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/app.js"))),
   "component---src-pages-dash-content-job-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/dash/content-job.js"))),
   "component---src-pages-dash-file-content-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/dash/file-content.js"))),
   "component---src-pages-dash-index-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/dash/index.js"))),
@@ -27,19 +29,6 @@ exports.components = {
   "component---src-pages-dash-student-table-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/dash/student-table.js"))),
   "component---src-pages-dash-subject-table-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/dash/subject-table.js"))),
   "component---src-pages-dash-tutor-table-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/dash/tutor-table.js"))),
-  "component---src-pages-index-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/index.js"))),
-  "component---src-pages-student-content-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/student-content.js"))),
-  "component---src-pages-student-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/student.js"))),
-  "component---src-pages-tutor-calendar-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/tutor/calendar.js"))),
-  "component---src-pages-tutor-classroom-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/tutor/classroom.js"))),
-  "component---src-pages-tutor-create-content-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/tutor/create-content.js"))),
-  "component---src-pages-tutor-create-task-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/tutor/create-task.js"))),
-  "component---src-pages-tutor-home-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/tutor/home.js"))),
-  "component---src-pages-tutor-index-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/tutor/index.js"))),
-  "component---src-pages-tutor-mystudents-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/tutor/mystudents.js"))),
-  "component---src-pages-tutor-profile-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/tutor/profile.js"))),
-  "component---src-pages-tutor-settings-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/tutor/settings.js"))),
-  "component---src-pages-tutor-tutor-content-creator-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/tutor/tutor-content-creator.js"))),
-  "component---src-pages-tutor-upload-memo-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/tutor/upload-memo.js")))
+  "component---src-pages-index-js": hot(preferDefault(require("/Users/euricocatumbela/Desktop/Files/Development/Apps/tad/src/pages/index.js")))
 }
 

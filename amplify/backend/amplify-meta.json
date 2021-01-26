@@ -1,42 +1,42 @@
 {
   "providers": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-tad-dev-224415-authRole",
-      "UnauthRoleArn": "arn:aws:iam::648766712947:role/amplify-tad-dev-224415-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::648766712947:role/amplify-tad-dev-224415-authRole",
-      "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-tad-dev-224415-deployment",
-      "UnauthRoleName": "amplify-tad-dev-224415-unauthRole",
-      "StackName": "amplify-tad-dev-224415",
-      "StackId": "arn:aws:cloudformation:us-east-1:648766712947:stack/amplify-tad-dev-224415/1fe24590-55e0-11eb-95e9-0a3fc8cbcb75",
-      "AmplifyAppId": "d12mhtn34xd5jn"
+      "AuthRoleName": "amplify-myadmin-dev-14223-authRole",
+      "UnauthRoleArn": "arn:aws:iam::648766712947:role/amplify-myadmin-dev-14223-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::648766712947:role/amplify-myadmin-dev-14223-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-myadmin-dev-14223-deployment",
+      "UnauthRoleName": "amplify-myadmin-dev-14223-unauthRole",
+      "StackName": "amplify-myadmin-dev-14223",
+      "StackId": "arn:aws:cloudformation:us-east-2:648766712947:stack/amplify-myadmin-dev-14223/fff64b80-5aaf-11eb-a425-0a215cc04b52",
+      "AmplifyAppId": "d14o0nq3s5pfan"
     }
   },
   "auth": {
-    "tad360e5914": {
+    "myadmin267be453": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "customAuth": false,
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-tad-dev-224415-deployment/amplify-cfn-templates/auth/tad360e5914-cloudformation-template.yml",
-        "logicalId": "authtad360e5914"
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-myadmin-dev-14223-deployment/amplify-cfn-templates/auth/myadmin267be453-cloudformation-template.yml",
+        "logicalId": "authmyadmin267be453"
       },
-      "lastPushTimeStamp": "2021-01-16T13:59:28.782Z",
+      "lastPushTimeStamp": "2021-01-20T00:50:25.558Z",
       "output": {
-        "AppClientSecret": "866qtir6covn5rtrtnl7tf31rpdcura5mcjeqa0t7c91lp3p5af",
-        "UserPoolId": "us-east-1_2g8Yqcow4",
-        "AppClientIDWeb": "2dffnl6eks4avec7lk62tloc63",
-        "AppClientID": "25m61bo6dvrc4u090nr42kj8ba",
-        "IdentityPoolId": "us-east-1:9aec2e63-4e2c-48c3-895a-e8c866d51628",
-        "IdentityPoolName": "tad360e5914_identitypool_360e5914__dev",
-        "UserPoolName": "tad360e5914_userpool_360e5914"
+        "AppClientSecret": "j10dn3am5lk2q7d7lk900mrqksj9cdra8kuooqfg6d1ki94ugnk",
+        "UserPoolId": "us-east-2_VG4YNVRME",
+        "AppClientIDWeb": "27u7jtv73c5a8id49024bai2bl",
+        "AppClientID": "616klodjtq7n7r5esqhaud3d02",
+        "IdentityPoolId": "us-east-2:f0161e7e-4d23-45c5-8638-28165407ed16",
+        "IdentityPoolName": "myadmin267be453_identitypool_267be453__dev",
+        "UserPoolName": "myadmin267be453_userpool_267be453"
       },
-      "lastPushDirHash": "gUBPF/gz0X5FbCSU+kO4/LbHdB8="
+      "lastPushDirHash": "YKyk2xXu5LUJnO17HVRhweaDZEc="
     }
   },
   "api": {
-    "tad": {
+    "myadmin": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
@@ -44,20 +44,20 @@
           "defaultAuthentication": {
             "authenticationType": "AMAZON_COGNITO_USER_POOLS",
             "userPoolConfig": {
-              "userPoolId": "authtad360e5914"
+              "userPoolId": "authmyadmin267be453"
             }
           },
           "additionalAuthenticationProviders": []
         },
-        "GraphQLAPIIdOutput": "662junpcqnccxmojhsi3xuaqja",
-        "GraphQLAPIEndpointOutput": "https://ngclfjpphbembonemqjba6iynu.appsync-api.us-east-1.amazonaws.com/graphql"
+        "GraphQLAPIIdOutput": "uzbbuvwkbnahdmljwkmvfvhrny",
+        "GraphQLAPIEndpointOutput": "https://ntqf2byhpvbnxiqptpfozfwppm.appsync-api.us-east-2.amazonaws.com/graphql"
       },
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-tad-dev-224415-deployment/amplify-cfn-templates/api/cloudformation-template.json",
-        "logicalId": "apitad"
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-myadmin-dev-14223-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apimyadmin"
       },
-      "lastPushTimeStamp": "2021-01-16T13:59:29.221Z",
-      "lastPushDirHash": "BByi0m1koimi4/7cCe4FwlBqRt0="
+      "lastPushTimeStamp": "2021-01-20T00:50:27.554Z",
+      "lastPushDirHash": "Va50ozXBEbi7l4H1K1dZVQ8OTgc="
     }
   }
 }

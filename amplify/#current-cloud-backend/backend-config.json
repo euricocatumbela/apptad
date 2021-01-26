@@ -1,6 +1,6 @@
 {
   "auth": {
-    "tad360e5914": {
+    "myadmin267be453": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
@@ -8,7 +8,7 @@
     }
   },
   "api": {
-    "tad": {
+    "myadmin": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
@@ -16,7 +16,7 @@
           "defaultAuthentication": {
             "authenticationType": "AMAZON_COGNITO_USER_POOLS",
             "userPoolConfig": {
-              "userPoolId": "authtad360e5914"
+              "userPoolId": "authmyadmin267be453"
             }
           },
           "additionalAuthenticationProviders": []

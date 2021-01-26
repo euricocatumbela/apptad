@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useState } from "react";
+import React, { forwardRef, useState } from "react";
 import MaterialTable from "material-table";
 import { TabScrollButton } from "@material-ui/core";
 import styled from "styled-components";
@@ -20,28 +20,12 @@ import ViewColumn from "@material-ui/icons/ViewColumn";
 import { Link } from "gatsby";
 
 // API Configurations
-import Amplify, { API, graphqlOperation } from "aws-amplify";
-import { listSubjects } from "../../graphql/queries";
-import aswConfig from "..//../aws-exports";
-Amplify.configure(aswConfig);
+// import Amplify, { API, graphqlOperation } from "aws-amplify";
+// import { listSubjects } from "../../graphql/queries";
+// import aswConfig from "..//../aws-exports";
+// Amplify.configure(aswConfig);
 
 export default function SubjectList() {
-  const [subjects, setSubjects] = useState([]);
-
-  useEffect(() => {
-    fetchSubjects();
-  }, []);
-
-  async function fetchSubjects() {
-    try {
-      const subjectData = await API.graphql(graphqlOperation(listSubjects));
-      const subjects = subjectData.data.listSubjects.items;
-      setSubjects(subjects);
-    } catch (err) {
-      console.log("Error fetching data");
-    }
-  }
-
   const [state, setState] = useState({
     columns: [
       {

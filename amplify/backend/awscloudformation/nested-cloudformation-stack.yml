@@ -68,15 +68,15 @@
         }
       }
     },
-    "authtad360e5914": {
+    "authmyadmin267be453": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-tad-dev-224415-deployment/amplify-cfn-templates/auth/tad360e5914-cloudformation-template.yml",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-myadmin-dev-14223-deployment/amplify-cfn-templates/auth/myadmin267be453-cloudformation-template.yml",
         "Parameters": {
-          "identityPoolName": "tad360e5914_identitypool_360e5914",
+          "identityPoolName": "myadmin267be453_identitypool_267be453",
           "allowUnauthenticatedIdentities": false,
-          "resourceNameTruncated": "tad360e5914",
-          "userPoolName": "tad360e5914_userpool_360e5914",
+          "resourceNameTruncated": "myadmi267be453",
+          "userPoolName": "myadmin267be453_userpool_267be453",
           "autoVerifiedAttributes": "email",
           "mfaConfiguration": "OFF",
           "mfaTypes": "SMS Text Message",
@@ -92,10 +92,10 @@
           "userpoolClientRefreshTokenValidity": 30,
           "userpoolClientWriteAttributes": "email",
           "userpoolClientReadAttributes": "email",
-          "userpoolClientLambdaRole": "tad360360e5914_userpoolclient_lambda_role",
+          "userpoolClientLambdaRole": "myadmi267be453_userpoolclient_lambda_role",
           "userpoolClientSetAttributes": false,
-          "sharedId": "360e5914",
-          "resourceName": "tad360e5914",
+          "sharedId": "267be453",
+          "resourceName": "myadmin267be453",
           "authSelections": "identityPoolAndUserPool",
           "authRoleArn": {
             "Fn::GetAtt": [
@@ -118,23 +118,23 @@
         }
       }
     },
-    "apitad": {
+    "apimyadmin": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-tad-dev-224415-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-myadmin-dev-14223-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "Parameters": {
           "CreateAPIKey": 0,
-          "AppSyncApiName": "tad",
+          "AppSyncApiName": "myadmin",
           "DynamoDBBillingMode": "PAY_PER_REQUEST",
           "DynamoDBEnableServerSideEncryption": false,
           "AuthCognitoUserPoolId": {
             "Fn::GetAtt": [
-              "authtad360e5914",
+              "authmyadmin267be453",
               "Outputs.UserPoolId"
             ]
           },
-          "S3DeploymentBucket": "amplify-tad-dev-224415-deployment",
-          "S3DeploymentRootKey": "amplify-appsync-files/022ea57bcb0028aff5ccedd52362144949d7d402",
+          "S3DeploymentBucket": "amplify-myadmin-dev-14223-deployment",
+          "S3DeploymentRootKey": "amplify-appsync-files/be41969908319e0d62b0fa09ff3c528a91b141a7",
           "env": "dev"
         }
       }
@@ -143,7 +143,7 @@
       "DependsOn": [
         "AuthRole",
         "UnauthRole",
-        "authtad360e5914"
+        "authmyadmin267be453"
       ],
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -226,7 +226,7 @@
         },
         "idpId": {
           "Fn::GetAtt": [
-            "authtad360e5914",
+            "authmyadmin267be453",
             "Outputs.IdentityPoolId"
           ]
         },
